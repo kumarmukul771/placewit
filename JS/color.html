@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <style>
+      #blue {
+        height: 200px;
+        width: 200px;
+        background-color: blue;
+      }
+      #red {
+        height: 200px;
+        width: 200px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="blue"></div>
+
+    <button id="btn">Change</button>
+
+    <script>
+      console.log(document.getElementById("blue").style.backgroundColor);
+      //   console.log(document.getElementById("blue").id);
+
+      function change() {
+        // let isIdBlue = document.getElementById("blue").id
+        // let isIdRed = document.getElementById("red").id
+        // console.log(document.getElementById("red"))
+
+        // First method
+        // if (document.getElementById("blue")) {
+        //   document.getElementById("blue").id = "red";
+        // } else {
+        //   document.getElementById("red").id = "blue";
+        // }
+        
+        // Second method
+        if (document.getElementById("blue").style.backgroundColor == "red") {
+          document.getElementById("blue").style.backgroundColor = "blue";
+        } else {
+          document.getElementById("blue").style.backgroundColor = "red";
+        }
+
+        // document.getElementById("blue").id = "red";
+        // document.getElementById("blue").style.backgroundColor = "Red";
+      }
+
+      document.getElementById("btn").onclick = change;
+    </script>
+  </body>
+</html>
