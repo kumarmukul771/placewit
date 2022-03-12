@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <style>
+            /* img {
+
+            } */
+        </style>
+    </head>
+    <body>
+        <img src="download (1).jpg" id="offImage" />
+        <button id="on">Turn on bulb</button>
+        <button id="off">Turn off bulb</button>
+
+
+        <script>
+            function turnOn(){
+                document.getElementById("offImage").src = 'download.jpg'
+            }
+
+            function turnOff(){
+                document.getElementById("offImage").src = 'download (1).jpg'
+            }
+
+            document.getElementById("on").onclick = turnOn(); 
+            document.getElementById("off").onclick = turnOff();
+        </script>
+    </body>
+</html>
