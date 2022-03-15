@@ -74,6 +74,18 @@
         else console.log(name, password, username, email);
       }
 
+      // Arrow function
+      const onSubmit2 = (a,b) => {
+        let name = document.getElementById("fullName").value;
+        let password = document.getElementById("password").value;
+        let username = document.getElementById("username").value;
+        let email = document.getElementById("email").value;
+
+        if (password.length < 8)
+          document.getElementById("wrong").style.b = "block";
+        else console.log(name, password, username, email);
+      };
+
       document.getElementById("submit").onclick = onSubmit;
     </script>
   </body>

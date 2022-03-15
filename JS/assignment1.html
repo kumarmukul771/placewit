@@ -1,0 +1,25 @@
+<html>
+  <head> </head>
+  <body>
+    <button onclick="showAlert()">Click me</button>
+
+    <script>
+      // arrow function
+      const showAlert = () => {
+        alert("HIII");
+      };
+
+      let a = 1,
+        b = "1,2,3",
+        c = [1, 2, 3];
+
+      console.log(a == c);
+      console.log(b == c);
+      console.log(a === b);
+
+      let x = `john ${b} Doe`,
+        y = new String("john"),z="john " + b +" Doe";
+      console.log(x, typeof x, y, typeof y,z);
+    </script>
+  </body>
+</html>
