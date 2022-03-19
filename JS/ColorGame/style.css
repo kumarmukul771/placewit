@@ -27,6 +27,10 @@ body {
 span {
   padding: 0 10px;
 }
+
+#easy {
+  background-color: greenyellow;
+}
 #play-again:hover,
 span:hover {
   cursor: pointer;
