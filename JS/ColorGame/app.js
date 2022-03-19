@@ -8,12 +8,21 @@ const newColor = () => {
 
 const check = (i, boxID, answerColor) => {
   if (i != boxID) {
-    document.getElementsByClassName("square")[i].style.opacity = "0";
+    // document.getElementsByClassName("square")[i].style.opacity = "0";
     document.getElementsByClassName("square")[i].style.visibility = "hidden";
   } else {
     document.getElementsByClassName("top")[0].style.backgroundColor =
       answerColor;
+    document.getElementById("correct").style.visibility = "visible";
+
+    for (let i = 0; i < 3; i++) {
+      document.getElementsByClassName("square")[i].style.backgroundColor =
+        answerColor;
+      document.getElementsByClassName("square")[i].style.visibility = "visible";
+    }
   }
+
+  document.getElementById("play-again").innerHTML = "Play again";
 };
 
 function initialize() {
@@ -40,13 +49,18 @@ function initialize() {
       boxID,
       answerColor
     );
+    document.getElementsByClassName("square")[i].style.visibility = "visible";
   }
 
   document.getElementById("answerColor").innerHTML = answerColor.toUpperCase();
   document.getElementById(boxID).style.backgroundColor = answerColor;
+  document.getElementById("correct").style.visibility = "hidden";
+  document.getElementsByClassName("top")[0].style.backgroundColor = "blue";
+  document.getElementById("play-again").innerHTML = "New Colors";
 }
 
 initialize();
+document.getElementById("play-again").onclick = initialize;
 
 // let obj = {
 //   firstName: "Mukul",
